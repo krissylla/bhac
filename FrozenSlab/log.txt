@@ -1,0 +1,174 @@
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+                          ____  _    _          _____                         
+                         |  _ \| |  | |   /\   / ____|                        
+                         | |_) | |__| |  /  \ | |                             
+                         |  _ <|  __  | / /\ \| |                             
+                         | |_) | |  | |/ ____ \ |____                         
+                         |____/|_|  |_/_/    \_\_____|                        
+                         -----------------------------                        
+                         The Black Hole Accretion Code                        
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ DITSAVE for file 1 =         1
+ DTSAVE  for file 2 = 0.10000    
+ DTSAVE  for file 3 = 0.10000    
+ Warning in ReadParameters: No save condition for file            4
+ DTSAVE  for file 5 = 0.10000E-02
+ Warning in ReadParameters: No save condition for file            6
+ TMAX=   500.00000000000000     
+ DTMIN=   1.0000000000000001E-009
+ typelimited to predictor for RK
+ Using          256  cells in dimension            1
+ level one dx(           1 )=   7.8125000000000000E-003
+ Using          256  cells in dimension            2
+ level one dx(           2 )=   7.8125000000000000E-003
+ Error estimation is Lohner's scheme
+ Reading from inifile: amrvac.par
+ snapshotini         :           -1
+ slicenext           :            0
+ collapsenext        :            0
+ shellnext           :            0
+ Filenameini         : output/data
+ Converting?         :  F
+                                                                 
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ Initialised Meta-info on metric:
+ -----------------------------------------
+ Using cart coordinates
+ Space is diagonal
+ Sqrt(gamma) is analytic: T
+ -----------------------------------------
+ These metric elements are zero:
+ F T T T
+ T F T T
+ T T F T
+ T T T F
+ Number of non-zero elements:           4
+ -----------------------------------------
+ These shift-components are zero:
+ T T T
+ Number of non-zero elements:           0
+ -----------------------------------------
+ These components of the metric derivative DgijDk are zero:
+ -----------
+ k=           1
+ T T T
+ T T T
+ T T T
+ -----------
+ k=           2
+ T T T
+ T T T
+ T T T
+ -----------
+ k=           3
+ T T T
+ T T T
+ T T T
+ -----------
+ Number of non-zero elements:           0
+ -----------------------------------------
+ These elements of shift derivatives dbetaidj are zero:
+ T T T
+ T T T
+ T T T
+ Number of non-zero elements:           0
+ -----------------------------------------
+ These elements of the lapse derivative dalphadj are zero:
+ T T T
+ Number of non-zero elements:           0
+ -----------------------------------------------------------------------------
+ mod_oneblock: reading           14  variables on unit:          15
+ Performing multigrid divB cleaning
+ iteration vs residual
+   1        NaN
+   2        NaN
+   3        NaN
+   4        NaN
+   5        NaN
+   6        NaN
+   7        NaN
+   8        NaN
+   9        NaN
+  10        NaN
+  11        NaN
+  12        NaN
+  13        NaN
+  14        NaN
+  15        NaN
+  16        NaN
+  17        NaN
+  18        NaN
+  19        NaN
+  20        NaN
+  21        NaN
+  22        NaN
+  23        NaN
+  24        NaN
+  25        NaN
+  26        NaN
+  27        NaN
+  28        NaN
+  29        NaN
+  30        NaN
+  31        NaN
+  32        NaN
+  33        NaN
+  34        NaN
+  35        NaN
+  36        NaN
+  37        NaN
+  38        NaN
+  39        NaN
+  40        NaN
+  41        NaN
+  42        NaN
+  43        NaN
+  44        NaN
+  45        NaN
+  46        NaN
+  47        NaN
+  48        NaN
+  49        NaN
+  50        NaN
+ divb_multigrid warning: not fully converged
+ current amplitude of divb:                        NaN
+ multigrid smallest grid:            2           2
+ note: smallest grid ideally has <= 8 cells
+ multigrid dx/dy/dz ratio:    1.0000000000000000        1.0000000000000000     
+ note: dx/dy/dz should be similar
+ -----------------------------------------------------------------------------
+ Startup phase took :             1.521 sec
+ -----------------------------------------------------------------------------
+ BCs before Advance took :        0.003 sec
+ -----------------------------------------------------------------------------
+ Saving visual data. Coordinate directions and variable names are:
+           1 X         
+           2 Y         
+           3 rho       rho       
+           4 u1        u1        
+           5 u2        u2        
+           6 u3        u3        
+           7 p         p         
+           8 b1        b1        
+           9 b2        b2        
+          10 b3        b3        
+          11 e1        e1        
+          12 e2        e2        
+          13 e3        e3        
+          14 s         s         
+          15 lfac      lfac      
+          16 xi        xi        
+          17 jz        jz        
+          18 v1        v1        
+          19 v2        v2        
+          20 v3        v3        
+          21 divB      divB      
+          22 divE      divE      
+ time =   0.0000000000000000     
+ -----------------------------------------------------------------------------
+ Warning: timesteps:   1.12500E-03 exceeding output intervals   1.00000E+99  1.00000E-01
+  1.00000E-01  1.00000E+99
+  1.00000E-03  1.00000E+99
