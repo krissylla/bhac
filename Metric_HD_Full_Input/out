@@ -1,0 +1,336 @@
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+                          ____  _    _          _____                         
+                         |  _ \| |  | |   /\   / ____|                        
+                         | |_) | |__| |  /  \ | |                             
+                         |  _ <|  __  | / /\ \| |                             
+                         | |_) | |  | |/ ____ \ |____                         
+                         |____/|_|  |_/_/    \_\_____|                        
+                         -----------------------------                        
+                         The Black Hole Accretion Code                        
+ -----------------------------------------------------------------------------
+ -----------------------------------------------------------------------------
+ DITSAVE for file 1 =        10
+ DTSAVE  for file 2 =  5.0000    
+ DTSAVE  for file 3 =  1.0000    
+ Warning in ReadParameters: No save condition for file            4
+ Warning in ReadParameters: No save condition for file            5
+ Warning in ReadParameters: No save condition for file            6
+ TMAX=   100.00000000000000     
+ DTMIN=   1.0000000000000000E-010
+ typelimited to predictor for RK
+ Using           64  cells in dimension            1
+ level one dx(           1 )=   2.5000000000000000     
+ Using           64  cells in dimension            2
+ level one dx(           2 )=   2.5000000000000000     
+ Using           64  cells in dimension            3
+ level one dx(           3 )=   2.5000000000000000     
+ Error estimation is Lohner's scheme
+ Note, Grid is reconstructed once every          10 iterations
+ Reading from inifile: amrvac.par
+ snapshotini         :           -1
+ slicenext           :            0
+ collapsenext        :            0
+ shellnext           :            0
+ Filenameini         : output/data
+ Converting?         :  F
+                                                                 
+ -----------------------------------------------------------------------------
+ metric name:   HMNS 3D                                                                                                                         
+ Dimensions in metric file:
+           3
+ Type of coordinates
+ Cartesian
+ x is present
+ y is present
+ z is present
+ 3+1 metric
+          10 metric components are given,           0 are default.
+ mod_coord_num: reading           10  variables on unit:          15
+ Header info int broadcasted, ipe:          16
+ Header info logical broadcasted, ipe:          16
+           3          10
+ Header info int broadcasted, ipe:          32
+ Header info logical broadcasted, ipe:          32
+           3          10
+ Header info int broadcasted, ipe:           0
+ Header info logical broadcasted, ipe:           0
+ Header info int broadcasted, ipe:           1
+ Header info logical broadcasted, ipe:           1
+           3          10
+ Header info int broadcasted, ipe:           2
+ Header info logical broadcasted, ipe:           2
+           3          10
+ Header info int broadcasted, ipe:           3
+ Header info logical broadcasted, ipe:           3
+           3          10
+ Header info int broadcasted, ipe:           4
+ Header info logical broadcasted, ipe:           4
+           3          10
+ Header info int broadcasted, ipe:           5
+ Header info logical broadcasted, ipe:           5
+           3          10
+ Header info int broadcasted, ipe:           6
+ Header info logical broadcasted, ipe:           6
+           3          10
+ Header info int broadcasted, ipe:           8
+ Header info logical broadcasted, ipe:           8
+           3          10
+ Header info int broadcasted, ipe:           9
+ Header info logical broadcasted, ipe:           9
+           3          10
+ Header info int broadcasted, ipe:          10
+ Header info logical broadcasted, ipe:          10
+           3          10
+ Header info int broadcasted, ipe:          12
+ Header info logical broadcasted, ipe:          12
+           3          10
+ Header info int broadcasted, ipe:          17
+ Header info logical broadcasted, ipe:          17
+           3          10
+ Header info int broadcasted, ipe:          18
+ Header info logical broadcasted, ipe:          18
+           3          10
+ Header info int broadcasted, ipe:          19
+ Header info logical broadcasted, ipe:          19
+           3          10
+ Header info int broadcasted, ipe:          20
+ Header info logical broadcasted, ipe:          20
+           3          10
+ Header info int broadcasted, ipe:          21
+ Header info logical broadcasted, ipe:          21
+           3          10
+ Header info int broadcasted, ipe:          22
+ Header info logical broadcasted, ipe:          22
+           3          10
+ Header info int broadcasted, ipe:          24
+ Header info logical broadcasted, ipe:          24
+           3          10
+ Header info int broadcasted, ipe:          25
+ Header info logical broadcasted, ipe:          25
+           3          10
+ Header info int broadcasted, ipe:          26
+ Header info logical broadcasted, ipe:          26
+           3          10
+ Header info int broadcasted, ipe:          27
+ Header info logical broadcasted, ipe:          27
+           3          10
+ Header info int broadcasted, ipe:          28
+ Header info logical broadcasted, ipe:          28
+           3          10
+ Header info int broadcasted, ipe:          29
+ Header info logical broadcasted, ipe:          29
+           3          10
+ Header info int broadcasted, ipe:          33
+ Header info logical broadcasted, ipe:          33
+           3          10
+ Header info int broadcasted, ipe:          35
+ Header info logical broadcasted, ipe:          35
+           3          10
+ Header info int broadcasted, ipe:          36
+ Header info logical broadcasted, ipe:          36
+           3          10
+ Header info int broadcasted, ipe:          37
+ Header info logical broadcasted, ipe:          37
+           3          10
+ Header info int broadcasted, ipe:          38
+ Header info logical broadcasted, ipe:          38
+           3          10
+ Header info int broadcasted, ipe:          39
+ Header info logical broadcasted, ipe:          39
+           3          10
+ Header info int broadcasted, ipe:          40
+ Header info logical broadcasted, ipe:          40
+           3          10
+ Header info int broadcasted, ipe:          41
+ Header info logical broadcasted, ipe:          41
+           3          10
+ Header info int broadcasted, ipe:          42
+ Header info logical broadcasted, ipe:          42
+           3          10
+ Header info int broadcasted, ipe:          43
+ Header info logical broadcasted, ipe:          43
+           3          10
+ Header info int broadcasted, ipe:          44
+ Header info logical broadcasted, ipe:          44
+           3          10
+ Header info int broadcasted, ipe:          45
+ Header info logical broadcasted, ipe:          45
+           3          10
+ Header info int broadcasted, ipe:          46
+ Header info logical broadcasted, ipe:          46
+           3          10
+ Header info int broadcasted, ipe:           7
+ Header info logical broadcasted, ipe:           7
+           3          10
+ Header info int broadcasted, ipe:          11
+ Header info logical broadcasted, ipe:          11
+           3          10
+ Header info int broadcasted, ipe:          13
+ Header info logical broadcasted, ipe:          13
+           3          10
+ Header info int broadcasted, ipe:          14
+ Header info logical broadcasted, ipe:          14
+           3          10
+ Header info int broadcasted, ipe:          15
+ Header info logical broadcasted, ipe:          15
+           3          10
+ Header info int broadcasted, ipe:          23
+ Header info logical broadcasted, ipe:          23
+           3          10
+ Header info int broadcasted, ipe:          30
+ Header info logical broadcasted, ipe:          30
+           3          10
+ Header info int broadcasted, ipe:          31
+ Header info logical broadcasted, ipe:          31
+           3          10
+ Header info int broadcasted, ipe:          47
+ Header info logical broadcasted, ipe:          47
+           3          10
+ Header info int broadcasted, ipe:          34
+ Header info logical broadcasted, ipe:          34
+           3          10
+ Metric broadcasted, ipe:           0
+ Metric broadcasted, ipe:           1
+ Metric broadcasted, ipe:           2
+ Metric broadcasted, ipe:           3
+ Metric broadcasted, ipe:           4
+ -----------------------------------------------------------------------------
+ Initialised Meta-info on metric:
+ -----------------------------------------
+ Using numCart coordinates
+ Space is non-diagonal
+ Sqrt(gamma) is analytic: F
+ -----------------------------------------
+ These metric elements are zero:
+ F F F F
+ F F F F
+ F F F F
+ F F F F
+ Number of non-zero elements:          16
+ -----------------------------------------
+ These shift-components are zero:
+ F F F
+ Number of non-zero elements:           3
+ -----------------------------------------
+ These components of the metric derivative DgijDk are zero:
+ -----------
+ k=           1
+ F F F
+ F F F
+ F F F
+ -----------
+ k=           2
+ F F F
+ F F F
+ F F F
+ -----------
+ k=           3
+ F F F
+ F F F
+ F F F
+ -----------
+ Number of non-zero elements:          27
+ -----------------------------------------
+ These elements of shift derivatives dbetaidj are zero:
+ F F F
+ F F F
+ F F F
+ Number of non-zero elements:           9
+ -----------------------------------------
+ These elements of the lapse derivative dalphadj are zero:
+ F F F
+ Number of non-zero elements:           3
+ -----------------------------------------------------------------------------
+ Metric broadcasted, ipe:           5
+ Metric broadcasted, ipe:           6
+ Metric broadcasted, ipe:           7
+ mod_oneblock: reading           11  variables on unit:          15
+ Metric broadcasted, ipe:           8
+ Metric broadcasted, ipe:           9
+ Metric broadcasted, ipe:          10
+ Metric broadcasted, ipe:          11
+ Metric broadcasted, ipe:          12
+ Metric broadcasted, ipe:          13
+ Metric broadcasted, ipe:          14
+ Metric broadcasted, ipe:          17
+ Metric broadcasted, ipe:          15
+ Metric broadcasted, ipe:          16
+ Metric broadcasted, ipe:          18
+ Metric broadcasted, ipe:          19
+ Metric broadcasted, ipe:          20
+ Metric broadcasted, ipe:          21
+ Metric broadcasted, ipe:          22
+ Metric broadcasted, ipe:          24
+ Metric broadcasted, ipe:          25
+ Metric broadcasted, ipe:          23
+ Metric broadcasted, ipe:          26
+ Metric broadcasted, ipe:          27
+ Metric broadcasted, ipe:          28
+ Metric broadcasted, ipe:          29
+ Metric broadcasted, ipe:          30
+ Metric broadcasted, ipe:          31
+ Metric broadcasted, ipe:          32
+ Metric broadcasted, ipe:          33
+ Metric broadcasted, ipe:          34
+ Metric broadcasted, ipe:          35
+ Metric broadcasted, ipe:          36
+ Metric broadcasted, ipe:          37
+ Metric broadcasted, ipe:          38
+ Metric broadcasted, ipe:          39
+ Metric broadcasted, ipe:          40
+ Metric broadcasted, ipe:          41
+ Metric broadcasted, ipe:          42
+ Metric broadcasted, ipe:          43
+ Metric broadcasted, ipe:          47
+ Metric broadcasted, ipe:          44
+ Metric broadcasted, ipe:          45
+ Metric broadcasted, ipe:          46
+ -----------------------------------------------------------------------------
+ Startup phase took :           232.528 sec
+ -----------------------------------------------------------------------------
+ BCs before Advance took :        0.014 sec
+ Warning: timesteps:   1.60004E+00 exceeding output intervals   1.00000E+99  5.00000E+00
+  1.00000E+00  1.00000E+99
+  1.00000E+99  1.00000E+99
+ -----------------------------------------------------------------------------
+ Saving visual data. Coordinate directions and variable names are:
+           1 X         
+           2 Y         
+           3 Z         
+           4 rho       rho       
+           5 u1        u1        
+           6 u2        u2        
+           7 u3        u3        
+           8 p         p         
+           9 b1        b1        
+          10 b2        b2        
+          11 b3        b3        
+          12 s         s         
+          13 lfac      lfac      
+          14 xi        xi        
+          15 divB      divB      
+          16 alpha     alpha     
+          17 g11       g11       
+          18 g12       g12       
+          19 g13       g13       
+          20 g22       g22       
+          21 g23       g23       
+          22 g33       g33       
+          23 beta1     beta1     
+          24 beta2     beta2     
+          25 beta3     beta3     
+ time =   0.0000000000000000     
+ -----------------------------------------------------------------------------
+ Total timeloop took        :      680.665 sec
+ Time spent on Regrid+Update:      577.326 sec
+                  Percentage:        84.82 %
+ Time spent on IO in loop   :       84.035 sec
+                  Percentage:        12.35 %
+ Time spent on BC           :      344.358 sec
+                  Percentage:        50.59 %
+ Total time spent on IO     :       84.120 sec
+ Total timeintegration took :      680.767 sec
+ -----------------------------------------------------------------------------
+ Finished BHAC in :           913.296 sec
+ -----------------------------------------------------------------------------

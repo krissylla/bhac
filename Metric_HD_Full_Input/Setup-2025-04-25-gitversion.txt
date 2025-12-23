@@ -1,0 +1,9 @@
+commit bdf3e1bcc157f54d1b76d6ae072e7df2c0b2a01c
+Author: Oliver Porth <oporth@helios-h0.science.uva.nl>
+Date:   Thu Apr 24 21:32:20 2025 +0200
+
+    removing npe_neighbors check (can be larger than 32 since we count _all_ childs of a finer neighbor block, not just the ones adjacent to the block in question).
+On branch v1.2
+Your branch is up to date with 'origin/v1.2'.
+
+nothing to commit, working tree clean
