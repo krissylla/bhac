@@ -1,0 +1,140 @@
+cp: target '/scratch-local/czilleruelo.21902345/bhac_runs/.' is not a directory
+cp: cannot create directory '/scratch-local/czilleruelo.21902345/codes/bhac': No such file or directory
+/var/spool/slurm/slurmd/job21902345/slurm_script: line 17: cd: /scratch-local/czilleruelo.21902345/bhac_runs/FrozenSlab: No such file or directory
+setting up grid
+grid set up complete. Now we compile
+make[1]: Entering directory '/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/Build'
+/home/czilleruelo/codes/bhac/src/vacpp.pl  -d=13 -phi=3 -z=2 -p=rmhd -nf=0 -eos=gamma -coord=cart /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/amrvacsettings.t  > /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amrvacsettings.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_indices.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_physicaldata.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_forest.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_connectivity.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_timing.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_metric_aux.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_bl.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_transform.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_rtsafe2D.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_lu.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_metric.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/initialize_vars.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_gridvars.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amrvac.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_constants.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/slice.f
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/slice.f:499:38:
+
+  499 |          call MPI_FILE_WRITE(slice_fh,line,len_trim(line), &
+      |                                      1
+......
+  596 |          call MPI_FILE_WRITE(file_handle,tree%node%leaf,1,MPI_LOGICAL, status,&
+      |                                         2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (CHARACTER(1024)/LOGICAL(4)).
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f:1077:17:
+
+ 1077 |    call MPI_SEND(send_n_particles_to_ipe(ipe),1,MPI_INTEGER,ipe,tag_send,&
+      |                 1
+......
+ 1235 |       call MPI_SEND(send_particles,send_n_particles_to_ipe(ipe),type_particle,&
+      |                    2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (INTEGER(4)/TYPE(particle_node)).
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f:1079:17:
+
+ 1079 |    call MPI_RECV(receive_n_particles_from_ipe(ipe),1,MPI_INTEGER,ipe,&
+      |                 1
+......
+ 1250 |       call MPI_RECV(receive_particles,receive_n_particles_from_ipe(ipe),&
+      |                    2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (INTEGER(4)/TYPE(particle_node)).
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f:299:21:
+
+  299 |   call MPI_ALLREDUCE(t_min_mype,t_particles,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                     1
+......
+ 1338 |    call MPI_ALLREDUCE(destroy_n_particles_mype,destroy_n_particles,1,&
+      |                      2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(8)/INTEGER(4)).
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f:299:32:
+
+  299 |   call MPI_ALLREDUCE(t_min_mype,t_particles,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                                1
+......
+ 1338 |    call MPI_ALLREDUCE(destroy_n_particles_mype,destroy_n_particles,1,&
+      |                                               2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(8)/INTEGER(4)).
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_particles.f:146:46:
+
+  146 |      call MPI_ALLGATHER(ninject,1,MPI_INTEGER,n_particles_to_inject,1,&
+      |                                              1
+......
+  337 | if (npe>0) call MPI_ALLGATHER(MPI_IN_PLACE,1,MPI_LOGICAL,has_particle,1,&
+      |                                                         2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (INTEGER(4)/LOGICAL(4)).
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/advance.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/setdt.f
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/setdt.f:289:23:
+
+   64 |    call MPI_ALLREDUCE(dtimpl_mype,dtimpl,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                      2 
+......
+  289 |     call MPI_ALLREDUCE(wnrm2_send,wnrm2_recv,nwflux,MPI_DOUBLE_PRECISION,&
+      |                       1
+Warning: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/setdt.f:289:34:
+
+   64 |    call MPI_ALLREDUCE(dtimpl_mype,dtimpl,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                                  2
+......
+  289 |     call MPI_ALLREDUCE(wnrm2_send,wnrm2_recv,nwflux,MPI_DOUBLE_PRECISION,&
+      |                                  1
+Warning: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/setdt.f:313:19:
+
+   64 |    call MPI_ALLREDUCE(dtimpl_mype,dtimpl,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                      2
+......
+  313 | call MPI_ALLREDUCE(resid_send,resid_recv,nwflux,MPI_DOUBLE_PRECISION, MPI_SUM,&
+      |                   1
+Warning: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/setdt.f:313:30:
+
+   64 |    call MPI_ALLREDUCE(dtimpl_mype,dtimpl,1,MPI_DOUBLE_PRECISION,MPI_MIN,&
+      |                                  2
+......
+  313 | call MPI_ALLREDUCE(resid_send,resid_recv,nwflux,MPI_DOUBLE_PRECISION, MPI_SUM,&
+      |                              1
+Warning: Rank mismatch between actual argument at (1) and actual argument at (2) (scalar and rank-1)
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amrini.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_limiter.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amr_solution_node.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/errest.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_fix_conserve.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_amr_fct.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amrgrid.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amr_fix_conserve.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_gc_comm.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amr_ghostcells.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_physaux.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/con2prim.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/amrvacphys.f
+mpif90 -c -ffree-form -O3 -fimplicit-none -fallow-argument-mismatch -I. /gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_oneblock.f
+/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/F90sources/mod_oneblock.f:48:5:
+
+   48 | use mod_amrvacdef
+      |     1
+Fatal Error: Cannot open module file ‘mod_amrvacdef.mod’ for reading at (1): No such file or directory
+compilation terminated.
+make[1]: *** [/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/makefile:142: mod_oneblock.o] Error 1
+make[1]: Leaving directory '/gpfs/home5/czilleruelo/bhac_runs/FrozenSlab/Build'
+make: *** [makefile:163: Build/mod_physicaldata.o] Error 2
+compilation succesful (maybe)
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./bhac
+Node: tcn158
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+Compilation and run complete
