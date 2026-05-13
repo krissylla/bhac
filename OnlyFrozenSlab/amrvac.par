@@ -71,7 +71,7 @@
         xprobmin2       = -140.0d0
         xprobmax2       = +140.0d0
         xprobmin3       = -0.0d0
-        xprobmax3       = +350.0d0
+        xprobmax3       = +2000.0d0
  &end
 
  &paramlist
