@@ -18,7 +18,8 @@
 !    eqpar(maxz_) = 22.0d0 !max z read in from data file
 
     call read_oneblock("normalized_it_53760.blk")
-    
+!     call read_oneblock("it_53760.blk")
+
 !    print *, woneblock(:,:,:,rho_)
 !    print *, xoneblock(:,:,:,:)
   
@@ -32,6 +33,7 @@
 
     use mod_amrvacdef
     use mod_oneblock
+    use mpi, only: MPI_COMM_WORLD, MPI_DOUBLE_PRECISION, MPI_SUM
 
     integer, intent(in) :: ixI^L, ixO^L
     type(state)         :: s
@@ -39,7 +41,10 @@
     integer             :: ix^D
     
     double precision                         :: xC(ixI^S,1:ndim)
+    double precision                         :: r_local, r_i, kappa
+    double precision                         :: rho_avg_ri
     integer                                  :: ixC^L, ixCp^L, idim, idir    
+    integer          :: ierror
 !-----------------------------------------------------------------------------
     associate(x=>s%x%x,w=>s%w%w{#IFDEF STAGGERED ,ws=>s%ws%w})
 
@@ -110,26 +115,30 @@ end do
 
 call faces2centers(ixO^L,s)
 
+! --- Step 1: Calculate Average Density and Pressure at the Interface (z ~ 22.0) ---
+rho_avg_ri = 2.9364326d-06
+kappa      = 9.953672287743379
+r_i = 22.0d0 + 117.6d0 
+
 {do ix^D=ixOmin^D, ixOmax^D \}
-	if (x(ix^D,3)<22.0d0) then
-    !call interpolate_oneblock( x(ix^D,:) , b3_, w(ix^D, b3_) ) 
-    call interpolate_oneblock( x(ix^D,:) , rho_, w(ix^D, rho_) )
-    call interpolate_oneblock( x(ix^D,:) , pp_, w(ix^D, pp_) )
-
-    call interpolate_oneblock( x(ix^D,:) , u1_, w(ix^D, u1_) )
-    call interpolate_oneblock( x(ix^D,:) , u2_, w(ix^D, u2_) )
-    call interpolate_oneblock( x(ix^D,:) , u3_, w(ix^D, u3_) )
-	else
-    w(ixO^S, rho_) = (x(ix^D,1)**2+x(ix^D,2)**2+(x(ix^D,3)+117.6)**2)**-1 * 146.4**2 * 2.9364326e-06
-    !w(ixO^S, rho_) = 1.0d-12
-    w(ixO^S, pp_) = 9.953672287743379* w(ixO^S, rho_)**(eqpar(gamma_)) 
-    w(ixO^S, u1_) = 0.0d0
-    w(ixO^S, u2_) = 0.0d0
-    w(ixO^S, u3_) = 0.0d0
-	end if
-    
-    
-
+    if (x(ix^D,3) < 22.0d0) then
+        ! Inner Region: Direct Interpolation
+        call interpolate_oneblock(x(ix^D,:), rho_, w(ix^D, rho_))
+        call interpolate_oneblock(x(ix^D,:), pp_,  w(ix^D, pp_))
+        call interpolate_oneblock(x(ix^D,:), u1_,  w(ix^D, u1_))
+        call interpolate_oneblock(x(ix^D,:), u2_,  w(ix^D, u2_))
+        call interpolate_oneblock(x(ix^D,:), u3_,  w(ix^D, u3_))
+    else
+        ! Outer Region: Spherical Atmosphere using derived Kappa
+        r_local = sqrt(x(ix^D,1)**2 + x(ix^D,2)**2 + (x(ix^D,3)+117.6d0)**2)
+        
+        w(ix^D, rho_) = rho_avg_ri * (r_i / r_local)**2
+        w(ix^D, pp_)  = kappa * w(ix^D, rho_)**(eqpar(gamma_))
+        
+        w(ix^D, u1_) = 0.0d0
+        w(ix^D, u2_) = 0.0d0
+        w(ix^D, u3_) = 0.0d0
+    end if
 {enddo\}
 
        
